@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/super_admin_login.css' %}">
+    <title>User Login</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body><center>
+    <h1>User Login....</h1>
+      <form method="post">
+        {% csrf_token %}
+        {{ lform.as_p }} <br>
+        <center>
+                <input type="submit" value="sbmit" class="btn btn-success">
+                <input type="reset"  value="clear" class="btn btn-danger"><br>
+                <a href="/user_registration/">User Registration</a>
+        </center>
+
+      </form>
+      </center>
+  </body>
+</html>

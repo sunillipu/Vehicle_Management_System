@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>Fetch Data</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+    tr{
+        text-align: center;
+    }
+    th,td{
+        padding: 10px 20px;
+    }
+    tbody:nth-of-type(odd){
+        /* background-color:darkblue;
+        color: white; */
+    }
+    tbody:nth-of-type(even){
+        /* background-color: deeppink;
+        color: white; */
+    }
+    thead{
+        /* background-color: green;
+        color: white;
+    } */
+    body{
+        /* background-color: chartreuse; */
+    }
+    h1{
+        font-size: 50px;
+        /* text-shadow: 5px 5px 5px red; */
+    }
+</style>
+
+
+
+<body>
+<h1 class="text-center"><u>Vehicle Details</u></h1>
+{% if vdata %}
+    <center>
+    <table border="2px">
+    <thead>
+    <tr>
+    <th>Vehicle Number</th>
+    <th>Vehicle Type</th>
+    <th>Vehicle Model</th>
+    <th>Vehicle Description</th>
+    </tr>
+    </thead>
+        {% for i in vdata %}
+         <tbody>
+         <tr>
+           <td> {{ i.vehicle_number }}</td>
+           <td> {{ i.vehicle_type }}</td>
+           <td> {{ i.vehicle_model }}</td>
+           <td> {{ i.vehicle_description }}</td>
+         </tr>
+         </tbody>
+    {% endfor %}
+    </table>
+    </center>
+{% else %}
+<h1>Data is not Available</h1>
+{% endif %}
+<center><a href="/#/">Goto Home Page</a></center>
+</body>
+</html>

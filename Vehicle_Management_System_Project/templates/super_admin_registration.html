@@ -1,0 +1,89 @@
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Super Admin Register</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+    b{
+        font-size: 30px;
+        color: blue;
+        text-shadow: 3px 3px 5px green;
+    }
+    h1{
+        font-size: 40px;
+        color: red;
+        text-shadow: 5px 5px 5px blue;
+    }
+    h2{
+        color: red;
+        text-shadow: 5px 5px 5px blue;
+
+    }
+    form
+       {
+        margin: 30px 300px;
+        border-radius: 10px;
+        /* box-shadow:-10px 10px 10px green,20px 20px 20px red; */
+        padding: 15px;
+    }
+
+</style>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-5 cal-md-6">
+
+
+        <form method="POST" >
+            <h1>Super Admin Register  Here...</h1>
+
+             {% csrf_token %}
+                    {{ rform }}<br>
+                    <center>
+                    <input type="submit" value="Register" class="btn btn-success">
+                    <input type="reset"  value="clear" class="btn btn-danger">
+                    </center>
+        </form>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+<!-- {% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/Super_Admin_Registration.css' %}">
+    <title>Super User</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  </head>
+  <body><center>
+    <h2>Super Admin User Registration....</h1>
+      <form class="" action="" method="post">
+        {% csrf_token %}
+        <center><label> Enter Your Name:</label>
+                <input type="text" name="name" value="" placeholder="Enter Full Name"><br>
+                <label> Enter Super Admin Username:</label>
+                <input type="text" name="sau" value="" placeholder="Create Super_Admin Username"><br>
+                <label>Enter Super Admin Password: </label>
+                <input type="text" name="sap" value="" placeholder="Create Super_Admin Password"><br>
+                <input type="submit" value="sbmit" class="btn btn-success">
+                <input type="reset"  value="clear" class="btn btn-danger"><br>
+        </center>
+
+      </form>
+      </center>
+  </body>
+</html> -->
